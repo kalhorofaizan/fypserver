@@ -38,14 +38,11 @@ export class UserController {
   adduser(
     @Body('name') name: string,
     @Body('number') number: string,
-    @Body('area') area: string,
-    @Body('cnic') cnic: string,
     @Body('email') email: string,
     @Body('password') password: string,
   ): any {
-    this.user = new UserDataModel(name, number, area, cnic, email, password);
+    this.user = new UserDataModel(name, number, email, password);
     return this.userService.adduser(this.user);
-    //    return this.userService.adduser();
   }
 
   @Delete(':id')
@@ -70,7 +67,6 @@ export class UserController {
 
   @Post('/login')
   login(@Body('email') email: string, @Body('password') password: string) {
-    console.log(email);
-    return email;
+    return this.userService.login(email, password);
   }
 }
