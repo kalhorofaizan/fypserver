@@ -1,13 +1,17 @@
-import { HttpException, Injectable } from '@nestjs/common';
+import {HttpException, HttpStatus, Injectable} from '@nestjs/common';
 import { InjectModel } from '@nestjs/mongoose';
 import { Model } from 'mongoose';
 import { UserDocument } from './user.schema';
-import { UserDataModel } from './user.model';
 import { comparePassword, hashPassword } from '../util/hash';
+import {AdduserModel} from "./adduser.model";
+import {JwtService} from "@nestjs/jwt";
 
 @Injectable()
 export class UserService {
-  constructor(@InjectModel('user') private userModel: Model<UserDocument>) {}
+  constructor(
+      private jwtService:JwtService,
+      @InjectModel('user') private userModel: Model<UserDocument>,
+  ) {}
 
   getalluser(): any {
     return this.userModel.find({ isDeleted: false });
@@ -18,19 +22,17 @@ export class UserService {
     return user;
   }
 
-  async adduser(dataModel: UserDataModel): Promise<any> {
-    const data = await this.userModel.findOne().where('email', dataModel.email);
+  async adduser(userModel: AdduserModel): Promise<any> {
+    const data = await this.userModel.findOne().where('email', userModel.email);
     if (data === null) {
-      dataModel.password = await hashPassword(dataModel.password);
-      const user = new this.userModel(dataModel);
+      userModel.password = await hashPassword(userModel.password);
+      const user = new this.userModel(userModel);
       const userdata = await user.save();
       return {
         id: userdata.id,
-        name: userdata.name,
-        profilepic: userdata.profilepic,
       };
     } else {
-      return new HttpException('email already use', 401);
+      return new HttpException('email already use', HttpStatus.CONFLICT);
     }
   }
 
@@ -66,9 +68,7 @@ export class UserService {
       const result = await comparePassword(password, data.password);
       if (result) {
         return {
-          id: data.id,
-          name: data.name,
-          profilepic: data.profilepic,
+          access_token:"Bearer "+this.jwtService.sign({name:data.name,id:data.id})
         };
       }
     }

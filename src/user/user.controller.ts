@@ -6,21 +6,24 @@ import {
   Param,
   UseInterceptors,
   Post,
-  UploadedFile,
+  Request,
+  UploadedFile, UseGuards, Injectable, Render,
 } from '@nestjs/common';
 import { diskStorage } from 'multer';
 import { UserService } from './user.service';
-import { UserDataModel } from './user.model';
 import { FileInterceptor } from '@nestjs/platform-express';
 import { imageFilter, fileName } from '../util/image.handler';
+import {AdduserModel} from "./adduser.model";
+import {ValidationPipe} from "../validation.pipe";
+import { AuthGuard } from '@nestjs/passport';
+import {JwtAuthGuard} from "../util/jwtAuthGuard";
+@Injectable()
 
 @Controller('user')
 export class UserController {
-  private user: UserDataModel;
   constructor(private userService: UserService) {}
-
-  @Get()
-  getAllUser(): any {
+  @Get('alluser')
+  getAllUser(@Request() req): any {
     return this.userService.getalluser();
   }
 
@@ -33,16 +36,11 @@ export class UserController {
       return false;
     }
   }
-
   @Post()
   adduser(
-    @Body('name') name: string,
-    @Body('number') number: string,
-    @Body('email') email: string,
-    @Body('password') password: string,
+    @Body(new ValidationPipe()) user: AdduserModel,
   ): any {
-    this.user = new UserDataModel(name, number, email, password);
-    return this.userService.adduser(this.user);
+    return this.userService.adduser(user);
   }
 
   @Delete(':id')
@@ -64,7 +62,6 @@ export class UserController {
     const result = this.userService.addProfilePic(image.filename, id);
     return result;
   }
-
   @Post('/login')
   login(@Body('email') email: string, @Body('password') password: string) {
     return this.userService.login(email, password);
