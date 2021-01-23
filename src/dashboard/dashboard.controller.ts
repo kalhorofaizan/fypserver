@@ -11,12 +11,7 @@ export class DashboardController {
 
   }
 
-  @Get('login')
-  @Post("login")
-  @Render('Login')
-  login(){
 
-  }
 
 
 }

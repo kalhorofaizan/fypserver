@@ -2212,8 +2212,8 @@
         "affectsGlobalScope": false
       },
       "../node_modules/@nestjs/platform-express/adapters/express-adapter.d.ts": {
-        "version": "7c9fb139cfddf0c42ca4a839f30bb78f13908774e48dbbbfbf69387af2ef6c13",
-        "signature": "7c9fb139cfddf0c42ca4a839f30bb78f13908774e48dbbbfbf69387af2ef6c13",
+        "version": "35f7f7c53a40bb4045e5abd418be7cbbbf8cba89b23b105926d753ae114a888f",
+        "signature": "35f7f7c53a40bb4045e5abd418be7cbbbf8cba89b23b105926d753ae114a888f",
         "affectsGlobalScope": false
       },
       "../node_modules/@nestjs/platform-express/adapters/index.d.ts": {
@@ -2222,8 +2222,8 @@
         "affectsGlobalScope": false
       },
       "../node_modules/@nestjs/platform-express/interfaces/nest-express-application.interface.d.ts": {
-        "version": "8b584341b20cfcdaf8e47f5b91b1d5bfae1cc1be94941b4ccec6cf07f1017950",
-        "signature": "8b584341b20cfcdaf8e47f5b91b1d5bfae1cc1be94941b4ccec6cf07f1017950",
+        "version": "c84f26d79f2c55c932ab7441fbaaceffb0ecb74aa01267ba8f3d65c3545f60ba",
+        "signature": "c84f26d79f2c55c932ab7441fbaaceffb0ecb74aa01267ba8f3d65c3545f60ba",
         "affectsGlobalScope": false
       },
       "../node_modules/@nestjs/platform-express/interfaces/index.d.ts": {
@@ -2432,7 +2432,7 @@
         "affectsGlobalScope": false
       },
       "../src/user/user.controller.ts": {
-        "version": "59e1bca70f5661351ebe2944bd423c7684739aae7cbe1ef1d4bf0da45356c001",
+        "version": "f58a56bd17651b6953fb0e3c54a36d882c04a990bf353bee35d5d8ddaa6feae7",
         "signature": "0cdc45938ab9cd75ff5a8d0ec1858f1e89b54034b69674e1275dbad676652980",
         "affectsGlobalScope": false
       },
@@ -2487,8 +2487,8 @@
         "affectsGlobalScope": false
       },
       "../src/dashboard/dashboard.controller.ts": {
-        "version": "920c0cf896a42e1921b392f2029aa7437b46a63548aa29ca84e8915e2130717f",
-        "signature": "efa463d2a13b4cdf8d53d898187880bf81d894661369fab9ed13e10d01b5703b",
+        "version": "10488045a8f546edc8989dcbecc42d187279964c3d8e1e3de9cd95f4596bd482",
+        "signature": "a1cc401c746bfb9ebb18145b682097c935884ec2b53eeeabc024ef094d6aa1ad",
         "affectsGlobalScope": false
       },
       "../src/dashboard/dashboard.module.ts": {
@@ -2496,8 +2496,23 @@
         "signature": "616b6d9d8e12a694ec3c816791f1f4f8c8a60ddf1573f86347830daa82a9861d",
         "affectsGlobalScope": false
       },
+      "../src/login/login.service.ts": {
+        "version": "1093f415568dd029fa79e3c2ce111b7f44577f67f5326beb7b5ca590ebad7465",
+        "signature": "0dc84811374aa30f136012f291a095d410c4d6b218d6ad48aa2d6f4ab01ed8de",
+        "affectsGlobalScope": false
+      },
+      "../src/login/login.controller.ts": {
+        "version": "be4d561f9112f7378d7cd4a6d509286302fd06b101b9c62aeb81af5ac572afb1",
+        "signature": "84d8e6cc1d9b59afb29ff879387ce12006ca8cc819c1d4dc3f4ff66ff51718c4",
+        "affectsGlobalScope": false
+      },
+      "../src/login/login.module.ts": {
+        "version": "dda9c3413ab3bd240340104e874b23827978a373cb94d661876e7097f49385db",
+        "signature": "7d2c312d4cd4539930e18319eea2c2d827a57c4b476c904069f8272ad1f74047",
+        "affectsGlobalScope": false
+      },
       "../src/app.module.ts": {
-        "version": "874b7075d6bb2e5167b13b6a33b995247c60f3d71991f96e598d3e97b45b9679",
+        "version": "660a05a3091301af47ac4e353090806a8947755e480aa9e7ffc72b88408fce26",
         "signature": "b82491e2990291580288c5602d4c017238977749d52b17391f0e45d9a29be644",
         "affectsGlobalScope": false
       },
@@ -2677,7 +2692,7 @@
         "affectsGlobalScope": false
       },
       "../src/main.ts": {
-        "version": "e759d1183a28e6f5f3cd8384b085410e1d8e709c443621797ba61891d74f94c8",
+        "version": "751a86752ac9a7e1954d9c9d22fe7a19f29a36360de4d99ce36683292c4b5e2a",
         "signature": "8e609bb71c20b858c77f0e9f90bb1319db8477b13f9f965f1a1e18524bf50881",
         "affectsGlobalScope": false
       },
@@ -4972,6 +4987,7 @@
         "../src/app.controller.ts",
         "../src/app.service.ts",
         "../src/dashboard/dashboard.module.ts",
+        "../src/login/login.module.ts",
         "../src/office/office.module.ts",
         "../src/user/user.module.ts"
       ],
@@ -4988,6 +5004,18 @@
         "../src/dashboard/dashboard.service.ts"
       ],
       "../src/dashboard/dashboard.service.ts": [
+        "../node_modules/@nestjs/common/index.d.ts"
+      ],
+      "../src/login/login.controller.ts": [
+        "../node_modules/@nestjs/common/index.d.ts",
+        "../src/login/login.service.ts"
+      ],
+      "../src/login/login.module.ts": [
+        "../node_modules/@nestjs/common/index.d.ts",
+        "../src/login/login.controller.ts",
+        "../src/login/login.service.ts"
+      ],
+      "../src/login/login.service.ts": [
         "../node_modules/@nestjs/common/index.d.ts"
       ],
       "../src/main.ts": [
@@ -7078,6 +7106,9 @@
       "../src/dashboard/dashboard.controller.ts": [
         "../src/dashboard/dashboard.service.ts"
       ],
+      "../src/login/login.controller.ts": [
+        "../src/login/login.service.ts"
+      ],
       "../src/office/office.schema.ts": [
         "../node_modules/@types/mongoose/index.d.ts"
       ],
@@ -7320,11 +7351,6 @@
       "../node_modules/@nestjs/passport/dist/passport/passport.serializer.d.ts",
       "../node_modules/@nestjs/passport/dist/passport/passport.strategy.d.ts",
       "../node_modules/@nestjs/passport/index.d.ts",
-      "../node_modules/@nestjs/platform-express/adapters/express-adapter.d.ts",
-      "../node_modules/@nestjs/platform-express/adapters/index.d.ts",
-      "../node_modules/@nestjs/platform-express/index.d.ts",
-      "../node_modules/@nestjs/platform-express/interfaces/index.d.ts",
-      "../node_modules/@nestjs/platform-express/interfaces/nest-express-application.interface.d.ts",
       "../node_modules/@nestjs/platform-express/interfaces/serve-static-options.interface.d.ts",
       "../node_modules/@nestjs/platform-express/multer/index.d.ts",
       "../node_modules/@nestjs/platform-express/multer/interceptors/any-files.interceptor.d.ts",
@@ -7680,19 +7706,14 @@
       "../node_modules/typescript/lib/lib.scripthost.d.ts",
       "../node_modules/typescript/lib/lib.webworker.importscripts.d.ts",
       "../src/app.controller.ts",
-      "../src/app.module.ts",
       "../src/app.service.ts",
-      "../src/dashboard/dashboard.controller.ts",
-      "../src/dashboard/dashboard.module.ts",
       "../src/dashboard/dashboard.service.ts",
-      "../src/main.ts",
       "../src/office/office.controller.ts",
       "../src/office/office.module.ts",
       "../src/office/office.schema.ts",
       "../src/office/office.service.ts",
       "../src/user/adduser.model.ts",
       "../src/user/jwt.strategy.ts",
-      "../src/user/user.module.ts",
       "../src/user/user.schema.ts",
       "../src/user/user.service.ts",
       "../src/util/constant.ts",

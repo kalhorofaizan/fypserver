@@ -3,5 +3,4 @@ export declare class DashboardController {
     private readonly dashboardService;
     constructor(dashboardService: DashboardService);
     dashboard(): void;
-    login(): void;
 }

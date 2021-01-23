@@ -18,8 +18,6 @@ let DashboardController = class DashboardController {
     }
     dashboard() {
     }
-    login() {
-    }
 };
 __decorate([
     common_1.Get(),
@@ -28,14 +26,6 @@ __decorate([
     __metadata("design:paramtypes", []),
     __metadata("design:returntype", void 0)
 ], DashboardController.prototype, "dashboard", null);
-__decorate([
-    common_1.Get('login'),
-    common_1.Post("login"),
-    common_1.Render('Login'),
-    __metadata("design:type", Function),
-    __metadata("design:paramtypes", []),
-    __metadata("design:returntype", void 0)
-], DashboardController.prototype, "login", null);
 DashboardController = __decorate([
     common_1.Controller('dashboard'),
     __metadata("design:paramtypes", [dashboard_service_1.DashboardService])

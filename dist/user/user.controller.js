@@ -37,7 +37,6 @@ let UserController = class UserController {
         }
     }
     adduser(user) {
-        console.log(user);
         return this.userService.adduser(user);
     }
     delete(id) {
