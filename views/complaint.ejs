@@ -1,0 +1,77 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Complaint Management System</title>
+    <%- include('importcss.ejs') %>
+</head>
+<body>
+<div class="page-wrapper compact-wrapper" id="pageWrapper">
+    <!-- Page Header Start-->
+        <%- include('Header.ejs')%>
+    <!-- Page Header Ends                              -->
+    <!-- Page Body Start-->
+    <div class="page-body-wrapper sidebar-icon">,
+        <!-- Page Sidebar Start--><
+        <%- include('SideMenu.ejs')%>
+
+        <!-- Container-fluid starts-->
+            <div class="page-body" >
+                <div class="container-fluid" >
+                  <div class="col-sm-12">
+                    <div class="card">
+                      <div class="card-header">
+                        <h5>User Complain   </h5>
+                      </div>
+                      <div class="card-block row">
+                        <div class="col-sm-12 col-lg-12 col-xl-12">
+                          <div class="table-responsive">
+                            <table class="table">
+                              <thead class="bg-primary">
+                                <tr>
+                                  <th scope="col">ID</th>
+                                  <th scope="col">User Name</th>
+                                  <th scope="col">Complaint subject</th>
+                                  <th scope="col">Actoin</th>
+                                 
+                                  
+
+                                </tr>
+                              </thead>
+                              <tbody>
+                                <tr>
+                                  <th scope="row">1</th>
+                                  <td>AWAIS</td>
+                                  <td>Internet not stable</td>
+                                  
+                                  
+                                 <td> <a href="/dashboard/profiles" class=" btn btn-primary"> View profile </a> </td>
+                                </tr>
+                                <tr>
+                                  <th scope="row">2</th>
+                                  <td>AWAIS</td>
+                                  <td>Electric appliacne not working</td>
+                                  
+                                  <td> <a href="/dashboard/profiles2" class=" btn btn-primary"> View profile </a> </td>
+                                </tr>
+                                
+                              </tbody>
+                            </table>
+                          </div>
+                        </div>
+                      </div>
+                      
+                     
+    
+                  
+            <!-- Container-fluid Ends-->
+        </div>
+    </div>
+<%- include('importjs.ejs')%>
+
+
+</body>
+</html>

@@ -1,19 +1,23 @@
-import {Controller, Get, Post, Render} from '@nestjs/common';
+import { Controller, Get, Render, Post, Body } from '@nestjs/common';
 import { LoginService } from './login.service';
 
 @Controller('login')
 export class LoginController {
   constructor(private readonly loginService: LoginService) {}
 
+
+
   @Get()
   @Render('Login')
   login(){
 
+      return {}
   }
+
 
   @Post()
-  signup(){
+  signup(@Body() body){
+
 
   }
-
 }

@@ -10,5 +10,9 @@ export declare class UserController {
     editProfile(image: any, id: string): any;
     login(email: string, password: string): Promise<import("@nestjs/common").HttpException | {
         access_token: string;
+        name: string;
+        profilepic: string;
+        email: string;
+        id: any;
     }>;
 }

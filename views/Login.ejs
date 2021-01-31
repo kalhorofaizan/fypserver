@@ -20,19 +20,23 @@
                     <div class="card-header"  style="text-align: center">
                         <h4>Login</h4>
                     </div>
+            <form   method="POST">
+
                     <div class="card-body">
                         <div class="form-group">
                             <label class="col-form-label pt-0" for="exampleInputEmail1">Email address</label>
-                            <input class="form-control" id="exampleInputEmail1" type="email" placeholder="Enter email" data-original-title="" title="">
+                            <input class="form-control" name="email" id="exampleInputEmail1" type="email" placeholder="Enter email" data-original-title="" title="">
                         </div>
                         <div class="form-group">
                             <label class="col-form-label pt-0" for="PasswordInput">Password</label>
-                            <input class="form-control" id="PasswordInput" type="password" placeholder="Enter Password" data-original-title="" title="">
+                            <input class="form-control" id="PasswordInput" type="password" placeholder="Enter Password" name="password" data-original-title="" title="">
                         </div>
                     </div>
                     <div class="card-footer">
-                        <button class="btn btn-primary " style="width: 100%" >Login</button>
+                        <button type="submit" class="btn btn-primary " style="width: 100%" >Login</button>
                     </div>
+        </form>
+
                 </div>
 
             </div>

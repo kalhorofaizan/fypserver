@@ -1,0 +1,226 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+        content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Complaint Management System</title>
+    <%- include('importcss.ejs') %>
+</head>
+
+<body>
+    <div class="page-wrapper compact-wrapper" id="pageWrapper">
+        <!-- Page Header Start-->
+        <%- include('Header.ejs')%>
+            <!-- Page Header Ends                              -->
+            <!-- Page Body Start-->
+            <div class="page-body-wrapper sidebar-icon">
+                <!-- Page Sidebar Start-->
+                <%- include('SideMenu.ejs')%>
+
+                    <!-- Container-fluid starts-->
+                    <div class="page-body">
+                        <div class="container-fluid">
+                            <div class="page-title">
+                                <div class="row">
+                                    <div class="col-6">
+                                        <h3>Customer Complains</h3>
+                                    </div>
+                                    <div class="col-6">
+                                        <ol class="breadcrumb">
+                                            <li class="breadcrumb-item"><a href="index.html"> <i
+                                                        data-feather="home"></i></a></li>
+                                            <li class="breadcrumb-item"> User</li>
+                                            <li class="breadcrumb-item active">Customer Compains</li>
+                                        </ol>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- Container-fluid starts-->
+                        <div class="container-fluid">
+                            <div class="row">
+                                <div class="col-sm-12">
+                                    <div class="card">
+                                        <div class="card-header">
+                                            <h5>Complaint Form</h5>
+                                        </div>
+                                        <div class="card-body">
+                                            <!-- Smart Wizard start-->
+                                            <div class="wizard-4" id="wizard">
+
+
+                                                <div class="col-sm-12 pl-0">
+                                                    <div class="form-group mb-3">
+                                                        <label for="name">First Name</label>
+                                                        <input class="form-control" id="name" type="text"
+                                                            placeholder="first name" required="required">
+                                                    </div>
+                                                    <div class="form-group mb-3">
+                                                        <label for="lname">Last Name</label>
+                                                        <input class="form-control" id="lname" type="text"
+                                                            placeholder="last name">
+                                                    </div>
+                                                    <div class="form-group mb-3">
+                                                        <label for="contact">Contact No.</label>
+                                                        <input class="form-control" id="contact" type="number"
+                                                            placeholder="03331234567">
+                                                    </div>
+                                                </div>
+
+
+                                                <div class="col-sm-12 pl-0">
+                                                    <div class="form-group mb-3 m-t-15">
+                                                        <label for="exampleFormControlInput1">Email address</label>
+                                                        <input class="form-control" id="exampleFormControlInput1"
+                                                            type="email" placeholder="name@example.com">
+                                                    </div>
+                                                    <div class="col-sm-12 pl-0">
+                                                        <div class="form-group mb-3">
+                                                            <label for="exampleFormControlInput1">Date of birth:</label>
+                                                            <input class="form-control" type="date">
+                                                        </div>
+                                                        <div class="form-group mb-3">
+                                                            <label class="control-label">Age</label>
+                                                            <input class="form-control" placeholder="Age" type="text">
+                                                        </div>
+                                                        <div class="form-group mb-3">
+                                                            <label class="control-label">CNIC</label>
+                                                            <input class="form-control" placeholder="xxxxxxxxxxxxx"
+                                                                type="text">
+                                                        </div>
+                                                    </div>
+
+                                                    <div class="col-sm-12 pl-0">
+                                                        <div class="form-group mb-3">
+                                                            <label class="control-label">Country</label>
+                                                            <input class="form-control mt-1" type="text"
+                                                                placeholder="Country" required="required">
+                                                        </div>
+                                                        <div class="form-group mb-3">
+                                                            <label class="control-label">State</label>
+                                                            <input class="form-control mt-1" type="text"
+                                                                placeholder="State" required="required">
+                                                        </div>
+                                                        <div class="form-group mb-3">
+                                                            <label class="control-label">City</label>
+                                                            <input class="form-control mt-1" type="text"
+                                                                placeholder="City" required="required">
+                                                        </div>
+
+                                                        <div class="col-form-label">Select department to complain</div>
+                                                        <select
+                                                            class="form-control form-control-primary-fill btn-square"
+                                                            name="select">
+                                                            <option value="opt1">Select One Value Only</option>
+                                                            <option value="opt2">Type 2</option>
+                                                            <option value="opt3">Type 3</option>
+                                                            <option value="opt4">Type 4</option>
+                                                            <option value="opt5">Type 5</option>
+                                                            <option value="opt6">Type 6</option>
+                                                            <option value="opt7">Type 7</option>
+                                                            <option value="opt8">Type 8</option>
+                                                        </select>
+                                                        <br>
+                                                        <button class="btn btn-primary" type="button">submit</button>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <br>
+                                            <br>
+                                        
+                                             <!-- chart starts-->
+
+                                              <div class="container-fluid">
+                                                <h4>COMPLAIN CHART</h4>
+                                                <br>
+                                                <div class="row">
+    
+                                                    <div class="col-xl-4 col-md-12 box-col-12">
+                                                        <div class="card o-hidden">
+                                                            <div class="chart-widget-top">
+                                                                <div class="row card-body">
+                                                                    <div class="col-5">
+                                                                        <h6 class="f-w-600 font-primary">RECEIVED</h6><span
+                                                                            class="num"><span class="counter">90</span>%<i
+                                                                                class="icon-angle-up f-12 ml-1"></i></span>
+                                                                    </div>
+                                                                    <div class="col-7 text-right">
+                                                                        <h4 class="num total-value"> <span
+                                                                                class="counter">3654</span></h4>
+                                                                    </div>
+                                                                </div>
+                                                                <div>
+                                                                    <div id="chart-widget1"></div>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="col-xl-4 col-md-12 box-col-12">
+                                                        <div class="card o-hidden">
+                                                            <div class="chart-widget-top">
+                                                                <div class="row card-body">
+                                                                    <div class="col-7">
+                                                                        <h6 class="f-w-600 font-success">RESOLVED</h6>
+                                                                        <span class="num"><span class="counter">30</span>%<i
+                                                                                class="icon-angle-up f-12 ml-1"></i></span>
+                                                                    </div>
+                                                                    <div class="col-5 text-right">
+                                                                        <h4 class="num total-value counter">12569</h4>
+                                                                    </div>
+                                                                </div>
+                                                                <div id="chart-widget2">
+                                                                    <div class="flot-chart-placeholder"
+                                                                        id="chart-widget-top-second"></div>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="col-xl-4 col-md-12 box-col-12">
+                                                        <div class="
+                                                        
+                                                        card o-hidden">
+                                                            <div class="chart-widget-top">
+                                                                <div class="row card-body">
+                                                                    <div class="col-8">
+                                                                        <h6 class="f-w-600 font-secondary">PENDING</h6><span
+                                                                            class="num"><span class="counter">68</span>%<i
+                                                                                class="icon-angle-up f-12 ml-1"></i></span>
+                                                                    </div>
+                                                                    <div class="col-4 text-right">
+                                                                        <h4 class="num total-value"><span
+                                                                                class="counter">93</span>M</h4>
+                                                                    </div>
+                                                                </div>
+                                                                <div id="chart-widget3">
+                                                                    <div class="flot-chart-placeholder"
+                                                                        id="chart-widget-top-third"></div>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                              </div>
+                                              </div>                                            <!-- Smart Wizard Ends-->
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+            </div>
+
+
+           
+            <!-- Container-fluid Ends-->
+    </div>
+    </div>
+    <%- include('importjs.ejs')%>
+
+
+</body>
+
+</html>

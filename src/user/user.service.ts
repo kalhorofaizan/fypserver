@@ -30,9 +30,13 @@ export class UserService {
       const userdata = await user.save();
       return {
         id: userdata.id,
+        access_token:"Bearer "+this.jwtService.sign({name:userdata.name,id:userdata.id}),
+        name:userdata.name,
+        profilepic:userdata.profilepic,
+        email:userdata.email,
       };
     } else {
-      return new HttpException('email already use', HttpStatus.CONFLICT);
+      return new HttpException('email already use', 401);
     }
   }
 
@@ -68,7 +72,11 @@ export class UserService {
       const result = await comparePassword(password, data.password);
       if (result) {
         return {
-          access_token:"Bearer "+this.jwtService.sign({name:data.name,id:data.id})
+          access_token:"Bearer "+this.jwtService.sign({name:data.name,id:data.id}),
+          name:data.name,
+          profilepic:data.profilepic,
+          email:data.email,
+          id:data.id
         };
       }
     }

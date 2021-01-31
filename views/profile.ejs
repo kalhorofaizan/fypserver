@@ -1,0 +1,185 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+        content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Complaint Management System</title>
+    <%- include('importcss.ejs') %>
+    <% console.log(user) %>
+</head>
+
+<body>
+    <div class="page-wrapper compact-wrapper" id="pageWrapper">
+        <!-- Page Header Start-->
+        <%- include('Header.ejs')%>
+            <!-- Page Header Ends                              -->
+            <!-- Page Body Start-->
+            <div class="page-body-wrapper sidebar-icon">
+                <!-- Page Sidebar Start-->
+                <%- include('SideMenu.ejs')%>
+
+                    <!-- Container-fluid starts-->
+                    <div class="page-body">
+                        <div class="container-fluid">
+                            <div class="page-title">
+                                <div class="row">
+                                    <div class="col-6">
+                                        <h3>User Profile</h3>
+                                    </div>
+                                    <div class="col-6">
+                                        <ol class="breadcrumb">
+                                            <li class="breadcrumb-item"><a href="index.html"> <i
+                                                        data-feather="home"></i></a></li>
+                                            <li class="breadcrumb-item">Users</li>
+                                            <li class="breadcrumb-item active">User Profile</li>
+                                        </ol>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- Container-fluid starts-->
+                        <div class="container-fluid">
+                            <div class="user-profile">
+                                <div class="row">
+                                    <!-- user profile first-style start-->
+                <div class="col-sm-12">
+                    <div class="card hovercard text-center">
+                      <div class="cardheader"></div>
+                      <div class="user-image">
+                        <div class="avatar"><img alt="" src="/uploads/<%=user.profilepic%>"></div>
+                        <div class="icon-wrapper"><i class="icofont icofont-pencil-alt-5"></i></div>
+                      </div>
+                      <div class="info">
+                        <div class="row">
+                          <div class="col-sm-6 col-lg-4 order-sm-1 order-xl-0">
+                            <div class="row">
+                              <div class="col-md-6">
+                                <div class="ttl-info text-left">
+                                  <h6><i class="fa fa-envelope"></i>   Email</h6><span><%=user.email%></span>
+                                </div>
+                              </div>
+                              <div class="col-md-6">
+                                <div class="ttl-info text-left">
+                                  <h6><i class="fa fa-calendar"></i>   date of join</h6><span><%=user.createdDate%></span>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                          <div class="col-sm-12 col-lg-4 order-sm-0 order-xl-1">
+                            <div class="user-designation">
+                              <div class="title"><a target="_blank" href="#">Awais Ali</a></div>
+                              <div class="desc mt-2">User</div>
+                            </div>
+                          </div>
+                          <div class="col-sm-6 col-lg-4 order-sm-2 order-xl-2">
+                            <div class="row">
+                              <div class="col-md-6">
+                                <div class="ttl-info text-left">
+                                  <h6><i class="fa fa-phone"></i>   Contact </h6><span><%=user.number%></span>
+                                </div>
+                              </div>
+                              <div class="col-md-6">
+                                <div class="ttl-info text-left">
+                                  <h6><i class="fa fa-location-arrow"></i>   Location</h6><span>Saddar karachi</span>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                  
+                   
+                      
+                                    <!-- Container-fluid Ends-->
+                                </div>
+                            </div>
+                            <!-- chart starts-->
+
+                            <div class="container-fluid">
+                                <h4>COMPLAIN CHART</h4>
+                                <br>
+                                <div class="row">
+
+                                    <div class="col-xl-4 col-md-12 box-col-12">
+                                        <div class="card o-hidden">
+                                            <div class="chart-widget-top">
+                                                <div class="row card-body">
+                                                    <div class="col-5">
+                                                        <h6 class="f-w-600 font-primary">RECEIVED</h6><span
+                                                            class="num"><span class="counter">90</span>%<i
+                                                                class="icon-angle-up f-12 ml-1"></i></span>
+                                                    </div>
+                                                    <div class="col-7 text-right">
+                                                        <h4 class="num total-value"> <span
+                                                                class="counter">3654</span></h4>
+                                                    </div>
+                                                </div>
+                                                <div>
+                                                    <div id="chart-widget1"></div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-xl-4 col-md-12 box-col-12">
+                                        <div class="card o-hidden">
+                                            <div class="chart-widget-top">
+                                                <div class="row card-body">
+                                                    <div class="col-7">
+                                                        <h6 class="f-w-600 font-success">RESOLVED</h6>
+                                                        <span class="num"><span class="counter">30</span>%<i
+                                                                class="icon-angle-up f-12 ml-1"></i></span>
+                                                    </div>
+                                                    <div class="col-5 text-right">
+                                                        <h4 class="num total-value counter">12569</h4>
+                                                    </div>
+                                                </div>
+                                                <div id="chart-widget2">
+                                                    <div class="flot-chart-placeholder"
+                                                        id="chart-widget-top-second"></div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-xl-4 col-md-12 box-col-12">
+                                        <div class="
+                                        
+                                        card o-hidden">
+                                            <div class="chart-widget-top">
+                                                <div class="row card-body">
+                                                    <div class="col-8">
+                                                        <h6 class="f-w-600 font-secondary">PENDING</h6><span
+                                                            class="num"><span class="counter">68</span>%<i
+                                                                class="icon-angle-up f-12 ml-1"></i></span>
+                                                    </div>
+                                                    <div class="col-4 text-right">
+                                                        <h4 class="num total-value"><span
+                                                                class="counter">93</span>M</h4>
+                                                    </div>
+                                                </div>
+                                                <div id="chart-widget3">
+                                                    <div class="flot-chart-placeholder"
+                                                        id="chart-widget-top-third"></div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                              </div>
+                              </div>                                            <!-- Smart Wizard Ends-->
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+</div>
+
+                            <%- include('importjs.ejs')%>
+
+
+</body>
+
+</html>

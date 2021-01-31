@@ -14,5 +14,9 @@ export declare class UserService {
     addProfilePic(imagename: string, id: string): Promise<any>;
     login(email: string, password: string): Promise<HttpException | {
         access_token: string;
+        name: string;
+        profilepic: string;
+        email: string;
+        id: any;
     }>;
 }

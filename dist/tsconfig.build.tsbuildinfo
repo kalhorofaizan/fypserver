@@ -1176,16 +1176,6 @@
         "signature": "95b5a3078fdc51508d5d9cde59a1dd9525b53fd42dc12265a55261fd415d3274",
         "affectsGlobalScope": false
       },
-      "../src/app.service.ts": {
-        "version": "eaf8514ce110fa428a93a27408df4d06d133dbd9ed0a775c315ddfdd507853a9",
-        "signature": "653711fba8904aa27fd8911b63cf526e7b334e13a292da4cefdbbe179ac3f3f2",
-        "affectsGlobalScope": false
-      },
-      "../src/app.controller.ts": {
-        "version": "260f889b9e2b69f77be1155348eb345166aec664b3efff6720053c6844a41f28",
-        "signature": "ef022c91ea9e75ab4082f2e881f9c4db7b346be2da706e876b253bebce5e6140",
-        "affectsGlobalScope": false
-      },
       "../node_modules/@nestjs/mongoose/dist/common/mongoose.decorators.d.ts": {
         "version": "8777e8b9e2aaad9e400a18387113faf9593806889cf4ef4267ce5271fce8b8be",
         "signature": "8777e8b9e2aaad9e400a18387113faf9593806889cf4ef4267ce5271fce8b8be",
@@ -1526,19 +1516,9 @@
         "signature": "8f1241f5d9f0d3d72117768b3c974e462840fbd85026fb66685078945404cf2f",
         "affectsGlobalScope": false
       },
-      "../src/user/user.schema.ts": {
-        "version": "4d7056af26cf4dcfbbecad59a9b61cbd9924a4f15c025d4c466d5f2cf8fe97e6",
-        "signature": "7a9a7891639201cc526a61d8d4c69d0a48cc7e58f6c4589702e54c9abbddc0af",
-        "affectsGlobalScope": false
-      },
-      "../node_modules/@types/bcrypt/index.d.ts": {
-        "version": "18b9a9702d2fc7d3766b0c8124133c761ad25a9d767925005777eb2c2cd8aeba",
-        "signature": "18b9a9702d2fc7d3766b0c8124133c761ad25a9d767925005777eb2c2cd8aeba",
-        "affectsGlobalScope": false
-      },
-      "../src/util/hash.ts": {
-        "version": "aa6865f9f946d17ee16f4ca48a042182133813ee7e78c044657a47f05b2eefbe",
-        "signature": "25a8217f4846de1bd37b852008b72509705571b5a99dbc123079c044c5b66535",
+      "../src/schema/admin.schema.ts": {
+        "version": "690a2dc8b1e67a05f3a5c703b0dc86a7c61ee297a74a7716eaf84679823be4af",
+        "signature": "03f5a858e2ace2f664080c3cebfc46eecba1591f9876a5c7369d60d582364d68",
         "affectsGlobalScope": false
       },
       "../node_modules/class-validator/types/validation/ValidationError.d.ts": {
@@ -2156,6 +2136,31 @@
         "signature": "1d5f30cbd06ffa2aab22346b087e140f069851c17b91189be8d1e168d53f9f93",
         "affectsGlobalScope": false
       },
+      "../src/app.service.ts": {
+        "version": "5b986cf92995fc2a4aad45a3894e4f86d0b52b6ea3321fccb2f2628cbfaa8da8",
+        "signature": "80ea40592ddb80de02cc302bc2a20c7530bdeb11f5c9ce945ad8a2f4b2306083",
+        "affectsGlobalScope": false
+      },
+      "../src/app.controller.ts": {
+        "version": "3e8a93bd4c7ed6c4b373b13b2f41769276e91ad23996ea8095460d43495fa690",
+        "signature": "0320247981a1ef7f382fa9164fe7b9d68a04bcfc4c242662609de159b900d12b",
+        "affectsGlobalScope": false
+      },
+      "../src/user/user.schema.ts": {
+        "version": "4d7056af26cf4dcfbbecad59a9b61cbd9924a4f15c025d4c466d5f2cf8fe97e6",
+        "signature": "7a9a7891639201cc526a61d8d4c69d0a48cc7e58f6c4589702e54c9abbddc0af",
+        "affectsGlobalScope": false
+      },
+      "../node_modules/@types/bcrypt/index.d.ts": {
+        "version": "18b9a9702d2fc7d3766b0c8124133c761ad25a9d767925005777eb2c2cd8aeba",
+        "signature": "18b9a9702d2fc7d3766b0c8124133c761ad25a9d767925005777eb2c2cd8aeba",
+        "affectsGlobalScope": false
+      },
+      "../src/util/hash.ts": {
+        "version": "aa6865f9f946d17ee16f4ca48a042182133813ee7e78c044657a47f05b2eefbe",
+        "signature": "25a8217f4846de1bd37b852008b72509705571b5a99dbc123079c044c5b66535",
+        "affectsGlobalScope": false
+      },
       "../src/user/adduser.model.ts": {
         "version": "5e0094f245fa1b5f91befbd99919ca82c56894090d1af14082a76eabe5e3b80a",
         "signature": "f2ca22f38d31b8efb1df611a26d3fd1435b834067c9104bdde1faf4bfa297d38",
@@ -2197,8 +2202,8 @@
         "affectsGlobalScope": false
       },
       "../src/user/user.service.ts": {
-        "version": "4dfc78270597c22702c3f376e6a5d143fc5ac6983e2d8beb4b9aaf3bc87a9bab",
-        "signature": "beedab3d7c490e170219b9d75a052c139b3bb46d61973760b915195cb188b9b2",
+        "version": "0fe9d3327a350c1154b5cf02ef61b09e3ed837c563752e1f29b209058366e274",
+        "signature": "ee281c8a08798627f2bca1ecf72366ff8b3d2a7298ab2af44b038f0e313322fc",
         "affectsGlobalScope": false
       },
       "../node_modules/@nestjs/core/adapters/http-adapter.d.ts": {
@@ -2432,8 +2437,8 @@
         "affectsGlobalScope": false
       },
       "../src/user/user.controller.ts": {
-        "version": "f58a56bd17651b6953fb0e3c54a36d882c04a990bf353bee35d5d8ddaa6feae7",
-        "signature": "0cdc45938ab9cd75ff5a8d0ec1858f1e89b54034b69674e1275dbad676652980",
+        "version": "d84133d1a5a5fd9b3cccfd4ed412a3c7b20761d5e72fd71cf766d9946cf80163",
+        "signature": "24042fd609cee36d8bec0bc918773e5ca0332bec1aecfed97551630e61d4dbf4",
         "affectsGlobalScope": false
       },
       "../node_modules/@types/passport-strategy/index.d.ts": {
@@ -2482,17 +2487,17 @@
         "affectsGlobalScope": false
       },
       "../src/dashboard/dashboard.service.ts": {
-        "version": "5213ce09010bf17ecc901c4a00060cf71f17cbea24511ffe4586fdc816362497",
-        "signature": "f1268034e099cb049f103179bc7dca55f259814d9b0997ae6fac4ab32f68efea",
+        "version": "c9c630adbfc309733e5b2b364ce5bf7154b46c823130792397698935815af0f4",
+        "signature": "9205198e6a34881c70fa5c81f8d09bff12708f32c4d46ca67cca9472a685fc70",
         "affectsGlobalScope": false
       },
       "../src/dashboard/dashboard.controller.ts": {
-        "version": "10488045a8f546edc8989dcbecc42d187279964c3d8e1e3de9cd95f4596bd482",
-        "signature": "a1cc401c746bfb9ebb18145b682097c935884ec2b53eeeabc024ef094d6aa1ad",
+        "version": "e003197e6925346dba37e71a76fd1881122e8fc25d4b13a90519642da1330cd8",
+        "signature": "82e25d5eba3634b6f831516fff03808cdb80a36c97fe2063a7c71c21dcb68bc6",
         "affectsGlobalScope": false
       },
       "../src/dashboard/dashboard.module.ts": {
-        "version": "50e84c42aaaba12ef3cec9167a26ab70689ac1fd2492312eb1f26cd337223200",
+        "version": "838a632c90eda4e4774787b22c26175b57b554d7fb4279a3e647c6aada86c800",
         "signature": "616b6d9d8e12a694ec3c816791f1f4f8c8a60ddf1573f86347830daa82a9861d",
         "affectsGlobalScope": false
       },
@@ -2502,8 +2507,8 @@
         "affectsGlobalScope": false
       },
       "../src/login/login.controller.ts": {
-        "version": "be4d561f9112f7378d7cd4a6d509286302fd06b101b9c62aeb81af5ac572afb1",
-        "signature": "84d8e6cc1d9b59afb29ff879387ce12006ca8cc819c1d4dc3f4ff66ff51718c4",
+        "version": "feef2879d567d82014be716d23beaba5a162b35efbe1de51efc7beb3fd8e03ab",
+        "signature": "aefedf4eb92561df393d1db86f9ad62e2662c3c14160bd89fdbc93bed6572475",
         "affectsGlobalScope": false
       },
       "../src/login/login.module.ts": {
@@ -2512,7 +2517,7 @@
         "affectsGlobalScope": false
       },
       "../src/app.module.ts": {
-        "version": "660a05a3091301af47ac4e353090806a8947755e480aa9e7ffc72b88408fce26",
+        "version": "e68c5cddb89b2db9eec4bd5f2a6b240698ce1abc0d13885538aa5fe76dba7300",
         "signature": "b82491e2990291580288c5602d4c017238977749d52b17391f0e45d9a29be644",
         "affectsGlobalScope": false
       },
@@ -2691,8 +2696,13 @@
         "signature": "7b5ed961a0e03965299591d73de8b8c41e8a68105ff4fc07a240b0dfb94a5a3d",
         "affectsGlobalScope": false
       },
+      "../node_modules/@types/express-session/index.d.ts": {
+        "version": "2e5548bb0a712c33b2865a49051bd41e2dc429249c8906f190969ea1497c4942",
+        "signature": "2e5548bb0a712c33b2865a49051bd41e2dc429249c8906f190969ea1497c4942",
+        "affectsGlobalScope": true
+      },
       "../src/main.ts": {
-        "version": "751a86752ac9a7e1954d9c9d22fe7a19f29a36360de4d99ce36683292c4b5e2a",
+        "version": "a34a20285ccec17e1dc9288778460e67501e6137569cc4bf6320a06300a2a23a",
         "signature": "8e609bb71c20b858c77f0e9f90bb1319db8477b13f9f965f1a1e18524bf50881",
         "affectsGlobalScope": false
       },
@@ -3834,6 +3844,10 @@
         "../node_modules/@types/node/index.d.ts",
         "../node_modules/@types/qs/index.d.ts",
         "../node_modules/@types/range-parser/index.d.ts"
+      ],
+      "../node_modules/@types/express-session/index.d.ts": [
+        "../node_modules/@types/express/index.d.ts",
+        "../node_modules/@types/node/events.d.ts"
       ],
       "../node_modules/@types/express/index.d.ts": [
         "../node_modules/@types/body-parser/index.d.ts",
@@ -4989,10 +5003,16 @@
         "../src/dashboard/dashboard.module.ts",
         "../src/login/login.module.ts",
         "../src/office/office.module.ts",
+        "../src/office/office.schema.ts",
+        "../src/schema/admin.schema.ts",
         "../src/user/user.module.ts"
       ],
       "../src/app.service.ts": [
-        "../node_modules/@nestjs/common/index.d.ts"
+        "../node_modules/@nestjs/common/index.d.ts",
+        "../node_modules/@nestjs/mongoose/index.d.ts",
+        "../node_modules/@types/mongoose/index.d.ts",
+        "../node_modules/class-validator/types/index.d.ts",
+        "../src/schema/admin.schema.ts"
       ],
       "../src/dashboard/dashboard.controller.ts": [
         "../node_modules/@nestjs/common/index.d.ts",
@@ -5000,11 +5020,18 @@
       ],
       "../src/dashboard/dashboard.module.ts": [
         "../node_modules/@nestjs/common/index.d.ts",
+        "../node_modules/@nestjs/mongoose/index.d.ts",
         "../src/dashboard/dashboard.controller.ts",
-        "../src/dashboard/dashboard.service.ts"
+        "../src/dashboard/dashboard.service.ts",
+        "../src/office/office.schema.ts",
+        "../src/user/user.schema.ts"
       ],
       "../src/dashboard/dashboard.service.ts": [
-        "../node_modules/@nestjs/common/index.d.ts"
+        "../node_modules/@nestjs/common/index.d.ts",
+        "../node_modules/@nestjs/mongoose/index.d.ts",
+        "../node_modules/@types/mongoose/index.d.ts",
+        "../node_modules/@types/passport/index.d.ts",
+        "../src/user/user.schema.ts"
       ],
       "../src/login/login.controller.ts": [
         "../node_modules/@nestjs/common/index.d.ts",
@@ -5021,6 +5048,7 @@
       "../src/main.ts": [
         "../node_modules/@nestjs/core/index.d.ts",
         "../node_modules/@nestjs/platform-express/index.d.ts",
+        "../node_modules/@types/express-session/index.d.ts",
         "../node_modules/@types/node/path.d.ts",
         "../src/app.module.ts"
       ],
@@ -5044,6 +5072,10 @@
         "../node_modules/@nestjs/mongoose/index.d.ts",
         "../node_modules/@types/mongoose/index.d.ts",
         "../src/office/office.schema.ts"
+      ],
+      "../src/schema/admin.schema.ts": [
+        "../node_modules/@nestjs/mongoose/index.d.ts",
+        "../node_modules/@types/mongoose/index.d.ts"
       ],
       "../src/user/adduser.model.ts": [
         "../node_modules/class-validator/types/index.d.ts"
@@ -5957,6 +5989,10 @@
         "../node_modules/@types/node/index.d.ts",
         "../node_modules/@types/qs/index.d.ts",
         "../node_modules/@types/range-parser/index.d.ts"
+      ],
+      "../node_modules/@types/express-session/index.d.ts": [
+        "../node_modules/@types/express/index.d.ts",
+        "../node_modules/@types/node/events.d.ts"
       ],
       "../node_modules/@types/express/index.d.ts": [
         "../node_modules/@types/body-parser/index.d.ts",
@@ -7103,8 +7139,17 @@
       "../src/app.controller.ts": [
         "../src/app.service.ts"
       ],
+      "../src/app.service.ts": [
+        "../node_modules/@types/mongoose/index.d.ts",
+        "../src/schema/admin.schema.ts"
+      ],
       "../src/dashboard/dashboard.controller.ts": [
-        "../src/dashboard/dashboard.service.ts"
+        "../src/dashboard/dashboard.service.ts",
+        "../src/user/user.schema.ts"
+      ],
+      "../src/dashboard/dashboard.service.ts": [
+        "../node_modules/@types/mongoose/index.d.ts",
+        "../src/user/user.schema.ts"
       ],
       "../src/login/login.controller.ts": [
         "../src/login/login.service.ts"
@@ -7115,6 +7160,9 @@
       "../src/office/office.service.ts": [
         "../node_modules/@types/mongoose/index.d.ts",
         "../src/office/office.schema.ts"
+      ],
+      "../src/schema/admin.schema.ts": [
+        "../node_modules/@types/mongoose/index.d.ts"
       ],
       "../src/user/jwt.strategy.ts": [
         "../node_modules/@types/passport-jwt/index.d.ts"
@@ -7351,6 +7399,11 @@
       "../node_modules/@nestjs/passport/dist/passport/passport.serializer.d.ts",
       "../node_modules/@nestjs/passport/dist/passport/passport.strategy.d.ts",
       "../node_modules/@nestjs/passport/index.d.ts",
+      "../node_modules/@nestjs/platform-express/adapters/express-adapter.d.ts",
+      "../node_modules/@nestjs/platform-express/adapters/index.d.ts",
+      "../node_modules/@nestjs/platform-express/index.d.ts",
+      "../node_modules/@nestjs/platform-express/interfaces/index.d.ts",
+      "../node_modules/@nestjs/platform-express/interfaces/nest-express-application.interface.d.ts",
       "../node_modules/@nestjs/platform-express/interfaces/serve-static-options.interface.d.ts",
       "../node_modules/@nestjs/platform-express/multer/index.d.ts",
       "../node_modules/@nestjs/platform-express/multer/interceptors/any-files.interceptor.d.ts",
@@ -7377,6 +7430,7 @@
       "../node_modules/@types/eslint/index.d.ts",
       "../node_modules/@types/estree/index.d.ts",
       "../node_modules/@types/express-serve-static-core/index.d.ts",
+      "../node_modules/@types/express-session/index.d.ts",
       "../node_modules/@types/express/index.d.ts",
       "../node_modules/@types/graceful-fs/index.d.ts",
       "../node_modules/@types/istanbul-lib-coverage/index.d.ts",
@@ -7706,14 +7760,24 @@
       "../node_modules/typescript/lib/lib.scripthost.d.ts",
       "../node_modules/typescript/lib/lib.webworker.importscripts.d.ts",
       "../src/app.controller.ts",
+      "../src/app.module.ts",
       "../src/app.service.ts",
+      "../src/dashboard/dashboard.controller.ts",
+      "../src/dashboard/dashboard.module.ts",
       "../src/dashboard/dashboard.service.ts",
+      "../src/login/login.controller.ts",
+      "../src/login/login.module.ts",
+      "../src/login/login.service.ts",
+      "../src/main.ts",
       "../src/office/office.controller.ts",
       "../src/office/office.module.ts",
       "../src/office/office.schema.ts",
       "../src/office/office.service.ts",
+      "../src/schema/admin.schema.ts",
       "../src/user/adduser.model.ts",
       "../src/user/jwt.strategy.ts",
+      "../src/user/user.controller.ts",
+      "../src/user/user.module.ts",
       "../src/user/user.schema.ts",
       "../src/user/user.service.ts",
       "../src/util/constant.ts",

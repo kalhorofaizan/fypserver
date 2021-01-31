@@ -10,10 +10,14 @@ exports.DashboardModule = void 0;
 const common_1 = require("@nestjs/common");
 const dashboard_service_1 = require("./dashboard.service");
 const dashboard_controller_1 = require("./dashboard.controller");
+const mongoose_1 = require("@nestjs/mongoose");
+const office_schema_1 = require("../office/office.schema");
+const user_schema_1 = require("../user/user.schema");
 let DashboardModule = class DashboardModule {
 };
 DashboardModule = __decorate([
     common_1.Module({
+        imports: [mongoose_1.MongooseModule.forFeature([{ name: 'user', schema: user_schema_1.UserSchema }, { name: 'office', schema: office_schema_1.OfficeSchema }]),],
         controllers: [dashboard_controller_1.DashboardController],
         providers: [dashboard_service_1.DashboardService]
     })

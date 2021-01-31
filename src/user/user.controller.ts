@@ -53,7 +53,7 @@ export class UserController {
     FileInterceptor('profilePic', {
       fileFilter: imageFilter,
       storage: diskStorage({
-        destination: './uploads',
+        destination: './profile/uploads',
         filename: fileName,
       }),
     }),

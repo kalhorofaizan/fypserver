@@ -83,7 +83,7 @@ __decorate([
     common_1.UseInterceptors(platform_express_1.FileInterceptor('profilePic', {
         fileFilter: image_handler_1.imageFilter,
         storage: multer_1.diskStorage({
-            destination: './uploads',
+            destination: './profile/uploads',
             filename: image_handler_1.fileName,
         }),
     })),

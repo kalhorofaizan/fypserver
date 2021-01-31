@@ -38,10 +38,14 @@ let UserService = class UserService {
             const userdata = await user.save();
             return {
                 id: userdata.id,
+                access_token: "Bearer " + this.jwtService.sign({ name: userdata.name, id: userdata.id }),
+                name: userdata.name,
+                profilepic: userdata.profilepic,
+                email: userdata.email,
             };
         }
         else {
-            return new common_1.HttpException('email already use', common_1.HttpStatus.CONFLICT);
+            return new common_1.HttpException('email already use', 401);
         }
     }
     async delete(id) {
@@ -70,7 +74,11 @@ let UserService = class UserService {
             const result = await hash_1.comparePassword(password, data.password);
             if (result) {
                 return {
-                    access_token: "Bearer " + this.jwtService.sign({ name: data.name, id: data.id })
+                    access_token: "Bearer " + this.jwtService.sign({ name: data.name, id: data.id }),
+                    name: data.name,
+                    profilepic: data.profilepic,
+                    email: data.email,
+                    id: data.id
                 };
             }
         }

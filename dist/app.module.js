@@ -15,12 +15,14 @@ const user_module_1 = require("./user/user.module");
 const office_module_1 = require("./office/office.module");
 const dashboard_module_1 = require("./dashboard/dashboard.module");
 const login_module_1 = require("./login/login.module");
+const admin_schema_1 = require("./schema/admin.schema");
 let AppModule = class AppModule {
 };
 AppModule = __decorate([
     common_1.Module({
         imports: [
-            mongoose_1.MongooseModule.forRoot('mongodb://localhost/fyp'),
+            mongoose_1.MongooseModule.forRoot('mongodb+srv://faizan:faizan123@cluster0.0a7it.mongodb.net/fyp?retryWrites=true&w=majority'),
+            mongoose_1.MongooseModule.forFeature([{ name: 'admins', schema: admin_schema_1.AdminSchema }]),
             user_module_1.UserModule,
             office_module_1.OfficeModule,
             dashboard_module_1.DashboardModule,
