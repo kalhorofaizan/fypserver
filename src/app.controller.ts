@@ -1,4 +1,4 @@
-import {Body, Controller, Get, Post, Render, Res, Session} from '@nestjs/common';
+import {Body, Controller, Get, Post, Render, Req, Res, Session} from '@nestjs/common';
 import { AppService } from './app.service';
 
 @Controller()
@@ -7,19 +7,29 @@ export class AppController {
 
   @Get()
   @Render("Login")
-  getHello() {
+  getHello(@Req() req,@Res() res) {
+    console.log(req.cookies.id!==undefined);
+    if (req.cookies.id!==undefined){
+     return  res.redirect('/dashboard');
+    }else {
+      return {error:null}
+    }
     return {}
+
   }
 
   @Post()
   @Render("Login")
-  async login(@Body() body, @Session() session, @Res() res) {
-    const result = await this.appService.login(body.email, body.password);
-    if (result) {
+  async login(@Body() body,@Res() res,@Req() req) {
+      let error = null;
+      const result = await this.appService.login(body.email, body.password);
+      if (result) {
 
-      return res.redirect('/dashboard');
-    }
-    return {}
+        return  res.cookie("id", "asd").redirect('/dashboard');
+      } else {
+        error = "Email password invalid"
+      }
+      return {error: error}
   }
 
 }

@@ -2,6 +2,6 @@ import { AppService } from './app.service';
 export declare class AppController {
     private readonly appService;
     constructor(appService: AppService);
-    getHello(): {};
-    login(body: any, session: any, res: any): Promise<any>;
+    getHello(req: any, res: any): any;
+    login(body: any, res: any, req: any): Promise<any>;
 }

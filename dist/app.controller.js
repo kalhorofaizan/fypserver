@@ -19,28 +19,40 @@ let AppController = class AppController {
     constructor(appService) {
         this.appService = appService;
     }
-    getHello() {
-        return {};
-    }
-    async login(body, session, res) {
-        const result = await this.appService.login(body.email, body.password);
-        if (result) {
+    getHello(req, res) {
+        console.log(req.cookies.id !== undefined);
+        if (req.cookies.id !== undefined) {
             return res.redirect('/dashboard');
         }
+        else {
+            return { error: null };
+        }
         return {};
+    }
+    async login(body, res, req) {
+        let error = null;
+        const result = await this.appService.login(body.email, body.password);
+        if (result) {
+            return res.cookie("id", "asd").redirect('/dashboard');
+        }
+        else {
+            error = "Email password invalid";
+        }
+        return { error: error };
     }
 };
 __decorate([
     common_1.Get(),
     common_1.Render("Login"),
+    __param(0, common_1.Req()), __param(1, common_1.Res()),
     __metadata("design:type", Function),
-    __metadata("design:paramtypes", []),
+    __metadata("design:paramtypes", [Object, Object]),
     __metadata("design:returntype", void 0)
 ], AppController.prototype, "getHello", null);
 __decorate([
     common_1.Post(),
     common_1.Render("Login"),
-    __param(0, common_1.Body()), __param(1, common_1.Session()), __param(2, common_1.Res()),
+    __param(0, common_1.Body()), __param(1, common_1.Res()), __param(2, common_1.Req()),
     __metadata("design:type", Function),
     __metadata("design:paramtypes", [Object, Object, Object]),
     __metadata("design:returntype", Promise)

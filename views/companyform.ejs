@@ -2,140 +2,102 @@
 <html lang="en">
 
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport"
-    content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
-  <meta http-equiv="X-UA-Compatible" content="ie=edge">
-  <title>Complaint Management System</title>
-  <%- include('importcss.ejs') %>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Complaint Management System</title>
+    <%- include('importcss.ejs') %>
 </head>
 
 <body>
-  <div class="page-wrapper compact-wrapper" id="pageWrapper">
+<div class="page-wrapper compact-wrapper" id="pageWrapper">
     <!-- Page Header Start-->
-    <%- include('Header.ejs')%>
-      <!-- Page Header Ends                              -->
-      <!-- Page Body Start-->
-      <div class="page-body-wrapper sidebar-icon">
+    <%- include('Header.ejs') %>
+    <!-- Page Header Ends                              -->
+    <!-- Page Body Start-->
+    <div class="page-body-wrapper sidebar-icon">
         <!-- Page Sidebar Start-->
-        <%- include('SideMenu.ejs')%>
+        <%- include('SideMenu.ejs') %>
 
-          <!-- Container-fluid starts-->
-          <div class="page-body">
+        <!-- Container-fluid starts-->
+        <div class="page-body">
             <div class="container-fluid">
-              <div class="col-xl-8" class="col-sm-12">
-                <form class="card">
-                  <div class="card-header">
-                    <h4 class="card-title mb-0">Add Company</h4>
-                    <div class="card-options"><a class="card-options-collapse" href="#" data-toggle="card-collapse"><i
-                          class="fe fe-chevron-up"></i></a><a class="card-options-remove" href="#"
-                        data-toggle="card-remove"><i class="fe fe-x"></i></a></div>
-                  </div>
-                  <div class="card-body">
-                    <div class="row">
-                      <div class="col-md-5">
-                        <div class="form-group mb-3">
-                          <label class="form-label">Company</label>
-                          <input class="form-control" type="text" placeholder="Company">
-                        </div>
-                      </div>
+                <div class="col-xl-8" class="col-sm-12">
+                    <form class="card" method="post">
 
-
-                      <div class="col-sm-6 col-md-4">
-                        <div class="form-group mb-3">
-                          <label class="form-label">Email address</label>
-                          <input class="form-control" type="email" placeholder="Email">
+                        <div class="card-header">
+                            <h4 class="card-title mb-0">Add Company</h4>
+                            <div class="card-options"><a class="card-options-collapse" href="#"
+                                                         data-toggle="card-collapse"><i
+                                            class="fe fe-chevron-up"></i></a><a class="card-options-remove" href="#"
+                                                                                data-toggle="card-remove"><i
+                                            class="fe fe-x"></i></a></div>
                         </div>
-                      </div>
-                      <div class="col-sm-6 col-md-6">
-                        <div class="form-group mb-3">
-                          <label class="form-label">First Name</label>
-                          <input class="form-control" type="text" placeholder="Company">
-                        </div>
-                      </div>
-                      <div class="col-sm-6 col-md-6">
-                        <div class="form-group mb-3">
-                          <label class="form-label">Last Name</label>
-                          <input class="form-control" type="text" placeholder="Last Name">
-                        </div>
-                      </div>
-                      <div class="col-md-12">
-                        <div class="form-group mb-3">
-                          <label class="form-label">Address</label>
-                          <input class="form-control" type="text" placeholder="Home Address">
-                        </div>
-                      </div>
-                      <div class="col-sm-6 col-md-4">
-                        <div class="form-group mb-3">
-                          <label class="form-label">City</label>
-                          <input class="form-control" type="text" placeholder="City">
-                        </div>
-                      </div>
-
-                      <div class="col-md-5">
-                        <div class="form-group mb-3">
-                          <label class="form-label">Province</label>
-                          <select class="form-control btn-square">
-                            <option value="0">--Select--</option>
-                            <option value="1">Sindh</option>
-                            <option value="2">Punjab</option>
-                            <option value="3">Balochistan</option>
-                            <option value="4">KPK</option>
-                          </select>
-                        </div>
-                      </div>
-                      <div class="col-md-12">
-                        <div class="form-group mb-3 mb-0">
-                          <label class="form-label">About Me</label>
-                          <textarea class="form-control" rows="5" placeholder="Enter About your description"></textarea>
-                          <div class="card">
-                            <div class="card-header">
-                              <h5>Custom controls</h5>
-                            </div>
-                            <form class="form theme-form">
-                              <div class="card-body">
-                                <div class="row">
-                                  <div class="col">
-                                    <div class="form-group row">
-                                      <label class="col-sm-3 col-form-label">Upload File</label>
-                                      <div class="col-sm-9">
-                                        <input class="form-control" type="file">
-                                      </div>
+                        <div class="card-body">
+                            <div class="row">
+                                <div class="col-md-6">
+                                    <div class="form-group mb-3">
+                                        <label class="form-label">Company</label>
+                                        <input class="form-control" type="text" name="name" placeholder="Company">
                                     </div>
-                                  </div>
                                 </div>
-                                <div class="row">
-                                  <div class="col">
-                                    <div class="form-group row mb-0">
-                                      <label class="col-sm-3 col-form-label">upload profile picture and logo</label>
-                                      <div class="col-sm-9">
-                                        <select class="custom-select form-control">
-                                          <option selected="">Open this select menu</option>
-                                          <option value="1">One</option>
-                                          <option value="2">Two</option>
-                                          <option value="3">Three</option>
-                                        </select>
-                                      </div>
+                                <div class="col-sm-6 col-md-6">
+                                    <div class="form-group mb-3">
+                                        <label class="form-label">Service</label>
+                                        <input class="form-control" name="service" type="text" placeholder="Service">
                                     </div>
-                                  </div>
                                 </div>
-                              </div>
-                          </div>
-                        </div>
-                      </div>
-                    </div>
-                    <div class="card-footer text-right">
-                      <button class="btn btn-primary" type="submit">Update Profile</button>
-                    </div>
-                </form>
-
-              </div>
-
-
-
+                                <div class="col-sm-6 col-md-6">
+                                    <div class="form-group mb-3">
+                                        <label class="form-label">Email</label>
+                                        <input class="form-control" type="email" placeholder="Email">
+                                    </div>
+                                </div>
+                                <div class="col-sm-6 col-md-6">
+                                    <div class="form-group mb-3">
+                                        <label class="form-label">Password</label>
+                                        <input class="form-control" type="password" placeholder="Password">
+                                    </div>
+                                </div>
+                                <div class="col-md-12">
+                                    <div class="form-group mb-3">
+                                        <label class="form-label">Address</label>
+                                        <input class="form-control" type="text" placeholder="Home Address">
+                                    </div>
+                                </div>
+                                <div class="col-sm-6 col-md-6">
+                                    <div class="form-group mb-3">
+                                        <label class="form-label">City</label>
+                                        <input class="form-control" type="text" placeholder="City">
+                                    </div>
+                                </div>
+                                <div class="col-sm-6 col-md-6">
+                                    <div class="form-group mt-4">
+                                        <label class="form-label">Image</label>
+                                        <button class="btn btn-success"  type="button"  onclick="$('#image').click()"  >Image Upload</button>
+                                        <input class="form-control" id="image" type="file" style="display: none"  name="image"  placeholder="image">
+                                    </div>
+                                </div>
+                                <div class="col-md-12">
+                                    <div class="form-group mb-3 mb-0">
+                                        <label class="form-label">About Company</label>
+                                        <textarea class="form-control" rows="5"
+                                            Image       placeholder="Enter About your description"></textarea>
+                                    </div>
+                                </div>
+                                <div class="card-footer text-right">
+                                    <button class="btn btn-primary" type="submit">Update Profile</button>
+                                </div>
+                    </form>
+                </div>
             </div>
-          </div>
-          <%- include('importjs.ejs')%>
+        </div>
+    </div>
+
+</div>
+</div>
+<%- include('importjs.ejs') %>
 
 
 </body>
